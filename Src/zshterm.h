@@ -1,0 +1,1 @@
+#include <ncurses/term.h>

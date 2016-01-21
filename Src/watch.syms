@@ -1,0 +1,16 @@
+E#ifndef have_Src_watch_globals
+E#define have_Src_watch_globals
+E
+Eextern char const*const default_watchfmt;
+Lstatic time_t getlogtime _((WATCH_STRUCT_UTMP*u,int inout));
+Lstatic char*watch3ary _((int inout,WATCH_STRUCT_UTMP*u,char*fmt,int prnt));
+Lstatic char*watchlog2 _((int inout,WATCH_STRUCT_UTMP*u,char*fmt,int prnt,int fini));
+Lstatic void watchlog _((int inout,WATCH_STRUCT_UTMP*u,char**w,char*fmt));
+Lstatic int ucmp _((WATCH_STRUCT_UTMP*u,WATCH_STRUCT_UTMP*v));
+Lstatic void readwtab _((void));
+Eextern void dowatch _((void));
+Eextern int bin_log _((UNUSED(char*nam),UNUSED(char**argv),UNUSED(Options ops),UNUSED(int func)));
+Eextern void dowatch _((void));
+Eextern int bin_log _((char*nam,char**argv,Options ops,int func));
+E
+E#endif /* !have_Src_watch_globals */

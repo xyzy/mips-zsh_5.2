@@ -1,0 +1,30 @@
+E#ifndef have_Src_compat_globals
+E#define have_Src_compat_globals
+E
+Xzpathmax
+Eextern mod_import_function long zpathmax _((char*dir));
+Xzopenmax
+Eextern mod_import_function long zopenmax _((void));
+Xzgetdir
+Eextern mod_import_function char*zgetdir _((struct dirsav*d));
+Eextern char*zgetcwd _((void));
+Xzchdir
+Eextern mod_import_function int zchdir _((char*dir));
+E#ifdef ZSH_64_BIT_TYPE
+L#ifdef ZSH_64_BIT_TYPE
+Xoutput64
+Eextern mod_import_function char*output64 _((zlong val));
+E#endif /* ZSH_64_BIT_TYPE */
+L#endif /* ZSH_64_BIT_TYPE */
+E#if defined(BROKEN_WCWIDTH) && (defined(__STDC_ISO_10646__) || defined(__APPLE__))
+L#if defined(BROKEN_WCWIDTH) && (defined(__STDC_ISO_10646__) || defined(__APPLE__))
+Eextern int mk_wcwidth _((wchar_t ucs));
+E#endif /* BROKEN_WCWIDTH && (__STDC_ISO_10646__ || __APPLE__) */
+L#endif /* BROKEN_WCWIDTH && (__STDC_ISO_10646__ || __APPLE__) */
+E#if defined(__APPLE__) && defined(BROKEN_ISPRINT)
+L#if defined(__APPLE__) && defined(BROKEN_ISPRINT)
+Eextern int isprint_ascii _((int c));
+E#endif /* __APPLE__ && BROKEN_ISPRINT */
+L#endif /* __APPLE__ && BROKEN_ISPRINT */
+E
+E#endif /* !have_Src_compat_globals */
