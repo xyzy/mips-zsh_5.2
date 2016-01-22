@@ -37,7 +37,7 @@ ZSH_TERM_H = ncurses/term.h
 tzsh            = zsh
 
 # installation directories
-prefix          = /usr/local
+prefix          = /home/hzy19930315/mips-install
 exec_prefix     = ${prefix}
 bindir          = ${exec_prefix}/bin
 libdir          = ${exec_prefix}/lib
@@ -47,7 +47,7 @@ mandir          = ${datarootdir}/man
 datarootdir     = ${prefix}/share
 datadir         = ${datarootdir}
 fndir           = ${datarootdir}/zsh/${VERSION}/functions
-fixed_sitefndir = 
+fixed_sitefndir = /usr/local/share/zsh/site-functions
 sitefndir       = ${datarootdir}/zsh/site-functions
 scriptdir       = ${datarootdir}/zsh/${VERSION}/scripts
 sitescriptdir   = ${datarootdir}/zsh/scripts
@@ -67,7 +67,7 @@ DLCFLAGS        = -fPIC
 DLLDFLAGS       = -shared
 LIBLDFLAGS      =  -s
 EXELDFLAGS      =  -s
-LIBS            = -ldl -lncurses -lrt -lm  -lc
+LIBS            = -liconv -ldl -lncurses -lrt -lm  -lc
 DL_EXT          = so
 DLLD            = mips-gcc
 EXPOPT          = 

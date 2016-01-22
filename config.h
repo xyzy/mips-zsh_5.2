@@ -294,10 +294,10 @@
 #define HAVE_HTONS 1
 
 /* Define to 1 if you have the `iconv' function. */
-/* #undef HAVE_ICONV */
+#define HAVE_ICONV 1
 
 /* Define to 1 if you have the <iconv.h> header file. */
-/* #undef HAVE_ICONV_H */
+#define HAVE_ICONV_H 1
 
 /* Define to 1 if you have the `inet_aton' function. */
 #define HAVE_INET_ATON 1
@@ -955,10 +955,10 @@
 /* #undef HPUX10DYNAMIC */
 
 /* Define as const if the declaration of iconv() needs const. */
-/* #undef ICONV_CONST */
+#define ICONV_CONST 
 
 /* Define to 1 if iconv() is linked from libiconv */
-/* #undef ICONV_FROM_LIBICONV */
+#define ICONV_FROM_LIBICONV 1
 
 /* Define to 1 if ino_t is 64 bit (for large file support). */
 /* #undef INO_T_IS_64_BIT */
